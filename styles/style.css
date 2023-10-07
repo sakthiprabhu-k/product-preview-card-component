@@ -12,8 +12,52 @@
     --bg-color: hsl(30, 38%, 92%);
     --button-price_tag-color: hsl(158, 36%, 37%);
     --first_heading-paragraph-color: hsl(228, 12%, 48%);
-    --second-heading-color: hsl(212, 21%, 14%);
+    --sub-heading-color: hsl(212, 21%, 14%);
     --card-bg-color: hsl(0, 0%, 100%);
     --ff-fraunces: 'Fraunces', serif;
     --ff-montserrat: 'Montserrat', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.flex-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color);
+}
+
+.card {
+    background-color: var(--card-bg-color);
+}
+
+
+.main-heading,
+.description {
+    font-family: var(--ff-montserrat);
+    color: var(--first_heading-paragraph-color);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.sub-heading {
+    font-family: var(--ff-fraunces);
+    color: var(--sub-heading-color);
+    font-weight: 700;
+}
+
+.current-price {
+    font-family: var(--ff-fraunces);
+    color: var(--button-price_tag-color);
+    font-weight: 700;
+}
+
+.striked-price {
+    font-family: var(--ff-montserrat);
+    color: var(--first_heading-paragraph-color);
+    font-weight: normal;
+    text-decoration: line-through;
+    font-size: 14px;
 }
