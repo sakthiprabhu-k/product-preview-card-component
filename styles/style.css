@@ -33,6 +33,16 @@ body {
     background-color: var(--card-bg-color);
 }
 
+/* 
+img,
+a {
+    display: block;
+} */
+
+.main-heading {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
 
 .main-heading,
 .description {
@@ -45,19 +55,93 @@ body {
 .sub-heading {
     font-family: var(--ff-fraunces);
     color: var(--sub-heading-color);
+    font-size: 2rem;
+    line-height: 2rem;
     font-weight: 700;
 }
 
 .current-price {
     font-family: var(--ff-fraunces);
     color: var(--button-price_tag-color);
+    font-size: 2rem;
     font-weight: 700;
 }
 
 .striked-price {
+    display: inline-block;
     font-family: var(--ff-montserrat);
     color: var(--first_heading-paragraph-color);
     font-weight: normal;
     text-decoration: line-through;
     font-size: 14px;
+    line-height: 2.3rem;
+    vertical-align: top;
+    margin-left: 10px;
+}
+
+/******************** Anchor links ********************************/
+
+.add-to-cart {
+    user-select: none;
+}
+
+.add-to-cart:link,
+.add-to-cart:visited {
+    font-family: var(--ff-montserrat);
+    font-weight: 700;
+    font-size: 14px;
+    display: block;
+    background-color: var(--button-price_tag-color);
+    color: var(--card-bg-color);
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+    padding-block: 15px;
+    border-radius: 9px;
+}
+
+.cart-icon {
+    vertical-align: top;
+    margin-right: 5px;
+}
+
+.button-top-margin {
+    margin-block-start: 20px;
+}
+
+/****************** Anchor links when being clicked****************** */
+
+.add-to-cart:active {
+    background-color: hsl(158, 36%, 20%);
+}
+
+/*********************** Mobile Design **********************/
+
+@media all and (max-width: 480px) {
+    .card {
+        width: 90vw;
+    }
+
+    .product-profile {
+        padding-inline: clamp(1rem, 5.2vw, 25px);
+        padding-block: clamp(1rem, 5.2vw, 25px);
+    }
+
+    .product-image {
+        display: block;
+        width: 100%;
+    }
+
+    .main-heading {
+        margin-block: 0;
+    }
+
+    .sub-heading {
+        margin-block: 15px;
+    }
+
+    .description {
+        line-height: 25px;
+        margin-block: 15px;
+    }
 }
