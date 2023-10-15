@@ -40,10 +40,8 @@ body {
     min-width: 50%;
 }
 
-
 .product-profile {
-    padding-inline: clamp(20px, 2.2vw, 30px);
-    padding-block: clamp(20px, 2.2vw, 30px);
+    padding: clamp(20px, 2.2vw, 30px);
 }
 
 .product-image {
@@ -70,8 +68,8 @@ body {
 .sub-heading {
     font-family: var(--ff-fraunces);
     color: var(--sub-heading-color);
-    font-size: 2rem;
-    line-height: 2rem;
+    font-size: 36px;
+    line-height: 32px;
     font-weight: 700;
     margin-block: 20px;
 }
@@ -84,7 +82,7 @@ body {
 .current-price {
     font-family: var(--ff-fraunces);
     color: var(--button-price_tag-color);
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: 700;
 }
 
@@ -95,7 +93,7 @@ body {
     font-weight: normal;
     text-decoration: line-through;
     font-size: 14px;
-    line-height: 2.3rem;
+    line-height: 36.8px;
     vertical-align: top;
     margin-left: 10px;
 }
@@ -144,14 +142,15 @@ body {
         width: 90vw;
     }
 
+    .card > :nth-child(n) {
+        width: 100%;
+    }
+
     .product-profile {
-        padding-inline: clamp(1rem, 5.2vw, 25px);
-        padding-block: clamp(1rem, 5.2vw, 25px);
+        padding: clamp(16px, 5.2vw, 25px);
     }
 
     .product-image {
-        display: block;
-        width: 100%;
         border-radius: 10px 10px 0 0;
     }
 
