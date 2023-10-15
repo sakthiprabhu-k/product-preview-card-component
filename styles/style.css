@@ -31,17 +31,32 @@ body {
 
 .card {
     background-color: var(--card-bg-color);
+    border-radius: 10px;
+    display: flex;
+    width: clamp(576px, 41.7vw, 590px);
 }
 
-/* 
-img,
-a {
+.card > :nth-child(n) {
+    min-width: 50%;
+}
+
+
+.product-profile {
+    padding-inline: clamp(20px, 2.2vw, 30px);
+    padding-block: clamp(20px, 2.2vw, 30px);
+}
+
+.product-image {
     display: block;
-} */
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
 
 .main-heading {
     text-transform: uppercase;
     letter-spacing: 4px;
+    margin-block: 0;
 }
 
 .main-heading,
@@ -58,6 +73,12 @@ a {
     font-size: 2rem;
     line-height: 2rem;
     font-weight: 700;
+    margin-block: 20px;
+}
+
+.description {
+    line-height: 23px;
+    margin-block: 20px;
 }
 
 .current-price {
@@ -106,7 +127,7 @@ a {
 }
 
 .button-top-margin {
-    margin-block-start: 20px;
+    margin-block-start: 25px;
 }
 
 /****************** Anchor links when being clicked****************** */
@@ -119,6 +140,7 @@ a {
 
 @media all and (max-width: 480px) {
     .card {
+        display: block;
         width: 90vw;
     }
 
@@ -130,10 +152,7 @@ a {
     .product-image {
         display: block;
         width: 100%;
-    }
-
-    .main-heading {
-        margin-block: 0;
+        border-radius: 10px 10px 0 0;
     }
 
     .sub-heading {
@@ -143,5 +162,11 @@ a {
     .description {
         line-height: 25px;
         margin-block: 15px;
+    }
+
+    /******************** Anchor links ********************************/
+
+    .button-top-margin {
+        margin-block-start: 20px;
     }
 }
